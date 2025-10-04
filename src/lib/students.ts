@@ -53,7 +53,21 @@ export const studentsService = {
   },
 
   // Get current student's classes
-  async getMyClasses(): Promise<any[]> {
+  async getMyClasses(): Promise<
+    Array<{
+      id: number;
+      name: string;
+      section: string;
+      createdAt: string;
+      updatedAt: string;
+      teacher?: {
+        id: number;
+        name: string;
+        email: string;
+      } | null;
+      studentCount: number;
+    }>
+  > {
     const response = await api.get("/students/me/classes");
     return response.data.data.classes;
   },

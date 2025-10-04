@@ -96,11 +96,11 @@ const EnrollmentDialog: React.FC<EnrollmentDialogProps> = ({
       onSuccess();
       onOpenChange(false);
       setSelectedClassId("");
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error enrolling student:", error);
       const errorMessage =
-        error.response?.data?.message ||
-        error.message ||
+        (error as any)?.response?.data?.message ||
+        (error as Error)?.message ||
         "Failed to enroll student";
 
       // Show specific error for class full scenario

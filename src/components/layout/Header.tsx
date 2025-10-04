@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({
         // For students, only search their classes
         const myClasses = await studentsService.getMyClasses();
         const filteredClasses = myClasses.filter(
-          (cls: any) =>
+          (cls: { name: string; section: string }) =>
             cls.name.toLowerCase().includes(term.toLowerCase()) ||
             cls.section.toLowerCase().includes(term.toLowerCase())
         );
@@ -131,20 +131,32 @@ const Header: React.FC<HeaderProps> = ({
     }
 
     try {
-      let sampleNotifications: any[] = [];
+      let sampleNotifications: Array<{
+        id: string;
+        type: string;
+        title: string;
+        message: string;
+        time: string;
+        unread: boolean;
+      }> = [];
 
       if (user.role === "student") {
         // For students, only show class-related notifications
         try {
           const myClasses = await studentsService.getMyClasses();
-          sampleNotifications = myClasses.map((cls: any, index: number) => ({
-            id: `class-${index}`,
-            type: "class",
-            title: "Your class update",
-            message: `${cls.name} - ${cls.section} is available`,
-            time: new Date(cls.createdAt).toLocaleTimeString(),
-            unread: true,
-          }));
+          sampleNotifications = myClasses.map(
+            (
+              cls: { name: string; section: string; createdAt: string },
+              index: number
+            ) => ({
+              id: `class-${index}`,
+              type: "class",
+              title: "Your class update",
+              message: `${cls.name} - ${cls.section} is available`,
+              time: new Date(cls.createdAt).toLocaleTimeString(),
+              unread: true,
+            })
+          );
         } catch (error) {
           // If no classes, show a welcome notification
           sampleNotifications = [
