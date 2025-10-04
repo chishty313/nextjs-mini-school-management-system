@@ -9,12 +9,14 @@ The Mini School Management System is a comprehensive platform designed to stream
 ## ✨ Key Features
 
 ### 🔐 **Authentication & Security**
+
 - **Secure Login System**: Role-based authentication with JWT tokens
 - **Multi-Role Access**: Separate dashboards for Admin, Teacher, and Student roles
 - **Session Management**: Automatic token refresh and secure logout
 - **Protected Routes**: Role-based route protection and access control
 
 ### 👨‍💼 **Admin Dashboard**
+
 - **School Overview**: Real-time statistics and analytics
 - **Student Management**: Complete student lifecycle management
 - **Class Management**: Create, update, and organize classes
@@ -24,6 +26,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 - **Reports & Analytics**: Comprehensive reporting system (Coming Soon)
 
 ### 👩‍🏫 **Teacher Dashboard**
+
 - **Teaching Overview**: Personal teaching statistics and metrics
 - **Class Management**: Manage assigned classes and sections
 - **Student Roster**: View and manage enrolled students
@@ -33,6 +36,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 - **Communication**: Send messages to students and parents (Coming Soon)
 
 ### 👨‍🎓 **Student Dashboard**
+
 - **Personal Dashboard**: Individual student statistics and progress
 - **My Classes**: View enrolled classes and instructors
 - **Class Schedule**: Access class timings and locations
@@ -43,6 +47,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 ### 🎯 **Core Functionality**
 
 #### **Student Management**
+
 - **Student Registration**: Easy student enrollment process
 - **Profile Management**: Complete student information management
 - **Class Assignment**: Assign students to appropriate classes
@@ -50,6 +55,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 - **Bulk Operations**: Handle multiple students simultaneously
 
 #### **Class Management**
+
 - **Class Creation**: Create new classes with sections
 - **Teacher Assignment**: Assign qualified teachers to classes
 - **Capacity Management**: Enforce class size limits (max 5 students per section)
@@ -57,6 +63,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 - **Real-time Updates**: Live updates across all interfaces
 
 #### **Enrollment System**
+
 - **Easy Enrollment**: Streamlined student enrollment process
 - **Class Availability**: Real-time class capacity information
 - **Transfer Management**: Handle student transfers between classes
@@ -65,18 +72,21 @@ The Mini School Management System is a comprehensive platform designed to stream
 ### 🔧 **Technical Features**
 
 #### **User Interface**
+
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
 - **Modern UI**: Clean, intuitive interface using shadcn/ui components
 - **Dark/Light Mode**: Theme customization options
 - **Accessibility**: WCAG compliant design for all users
 
 #### **Real-time Features**
+
 - **Live Updates**: Real-time data synchronization
 - **Auto-refresh**: Automatic data refresh every 30 seconds
 - **Notifications**: Real-time notification system
 - **Search**: Instant search across all data
 
 #### **Performance**
+
 - **Fast Loading**: Optimized for quick page loads
 - **Caching**: Intelligent data caching for better performance
 - **Pagination**: Efficient handling of large datasets
@@ -85,6 +95,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ installed on your system
 - npm or yarn package manager
 - Backend API running (see backend repository)
@@ -92,23 +103,27 @@ The Mini School Management System is a comprehensive platform designed to stream
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/chishty313/nextjs-mini-school-management-system.git
    cd nextjs-mini-school-management-system
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
    Create a `.env.local` file in the root directory:
+
    ```env
    NEXT_PUBLIC_API_URL=http://localhost:3000
    ```
 
 4. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -119,6 +134,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 ## 🎯 User Roles & Permissions
 
 ### 🔴 **Administrator**
+
 - **Full System Access**: Complete control over all system features
 - **User Management**: Create, update, and delete users
 - **Class Management**: Create and manage all classes
@@ -128,6 +144,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 - **Reports Access**: View comprehensive system reports
 
 ### 🟡 **Teacher**
+
 - **Class Management**: Manage assigned classes only
 - **Student View**: View students in assigned classes
 - **Attendance**: Record student attendance
@@ -136,6 +153,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 - **Schedule Management**: Manage class schedules
 
 ### 🟢 **Student**
+
 - **Personal Dashboard**: View personal information and progress
 - **Class Access**: View enrolled classes and schedules
 - **Assignment View**: Access assignments and grades
@@ -145,6 +163,7 @@ The Mini School Management System is a comprehensive platform designed to stream
 ## 📱 Responsive Design
 
 The application is fully responsive and optimized for:
+
 - **Desktop**: Full-featured experience with all functionality
 - **Tablet**: Touch-optimized interface with adapted layouts
 - **Mobile**: Streamlined mobile experience with essential features
@@ -161,6 +180,7 @@ The application is fully responsive and optimized for:
 ## 🎨 Design System
 
 ### **Color Scheme**
+
 - **Primary**: Professional blue tones
 - **Secondary**: Complementary accent colors
 - **Success**: Green for positive actions
@@ -169,11 +189,13 @@ The application is fully responsive and optimized for:
 - **Neutral**: Gray scale for text and backgrounds
 
 ### **Typography**
+
 - **Font Family**: Inter (modern, readable sans-serif)
 - **Hierarchy**: Clear heading and body text structure
 - **Accessibility**: High contrast ratios for readability
 
 ### **Components**
+
 - **Buttons**: Consistent button styles and states
 - **Forms**: User-friendly form components
 - **Tables**: Sortable, filterable data tables
@@ -184,12 +206,14 @@ The application is fully responsive and optimized for:
 ## 📊 Data Management
 
 ### **Real-time Updates**
+
 - Automatic data refresh every 30 seconds
 - Live notifications for important events
 - Instant updates across all user interfaces
 - Conflict resolution for concurrent edits
 
 ### **Data Validation**
+
 - Client-side validation for immediate feedback
 - Server-side validation for data integrity
 - Comprehensive error handling and messaging
@@ -198,6 +222,7 @@ The application is fully responsive and optimized for:
 ## 🔄 Workflow Management
 
 ### **Student Enrollment Process**
+
 1. Student registration by admin
 2. Class assignment based on capacity
 3. Teacher assignment to classes
@@ -205,6 +230,7 @@ The application is fully responsive and optimized for:
 5. Access to class materials and schedule
 
 ### **Class Management Workflow**
+
 1. Admin creates new class
 2. Assigns teacher to class
 3. Sets class capacity and schedule
@@ -214,12 +240,14 @@ The application is fully responsive and optimized for:
 ## 📈 Analytics & Reporting
 
 ### **Dashboard Metrics**
+
 - **Student Statistics**: Total students, enrollment rates
 - **Class Analytics**: Active classes, capacity utilization
 - **Teacher Metrics**: Teaching loads, class assignments
 - **System Health**: Performance and usage statistics
 
 ### **Real-time Monitoring**
+
 - Live dashboard updates
 - Performance metrics
 - User activity tracking
@@ -228,7 +256,9 @@ The application is fully responsive and optimized for:
 ## 🚀 Deployment
 
 ### **Production Deployment**
+
 The application is deployed on Vercel with:
+
 - **Automatic Deployments**: GitHub integration
 - **Environment Variables**: Secure configuration
 - **CDN Distribution**: Global content delivery
@@ -236,6 +266,7 @@ The application is deployed on Vercel with:
 - **Performance Monitoring**: Real-time performance tracking
 
 ### **Environment Configuration**
+
 - **Development**: Local development environment
 - **Staging**: Pre-production testing environment
 - **Production**: Live production environment
@@ -251,6 +282,7 @@ We welcome contributions to improve the Mini School Management System:
 5. **Submit a pull request**
 
 ### **Development Guidelines**
+
 - Follow the existing code style
 - Write comprehensive tests
 - Update documentation
@@ -260,12 +292,14 @@ We welcome contributions to improve the Mini School Management System:
 ## 📞 Support & Contact
 
 ### **Documentation**
+
 - **User Manual**: Comprehensive user guide
 - **API Documentation**: Backend API reference
 - **Troubleshooting Guide**: Common issues and solutions
 - **FAQ**: Frequently asked questions
 
 ### **Getting Help**
+
 - **GitHub Issues**: Report bugs and request features
 - **Documentation**: Check the comprehensive guides
 - **Community**: Join our developer community
@@ -286,6 +320,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔮 Future Roadmap
 
 ### **Phase 1 - Core Features** ✅
+
 - [x] User authentication and authorization
 - [x] Student management system
 - [x] Class management system
@@ -294,6 +329,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] Real-time updates
 
 ### **Phase 2 - Enhanced Features** 🚧
+
 - [ ] Grade management system
 - [ ] Attendance tracking
 - [ ] Assignment management
@@ -302,6 +338,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Reporting system
 
 ### **Phase 3 - Advanced Features** 📋
+
 - [ ] Mobile application
 - [ ] Parent portal
 - [ ] Advanced analytics
@@ -310,6 +347,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Advanced security features
 
 ### **Phase 4 - Enterprise Features** 🎯
+
 - [ ] Multi-school support
 - [ ] Advanced reporting
 - [ ] Custom workflows
@@ -320,24 +358,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌟 Why Choose This System?
 
 ### **For Administrators**
+
 - **Complete Control**: Full system administration capabilities
 - **Efficient Management**: Streamlined administrative processes
 - **Real-time Insights**: Live data and analytics
 - **Scalable Solution**: Grows with your school
 
 ### **For Teachers**
+
 - **Simplified Workflow**: Easy class and student management
 - **Time Saving**: Automated administrative tasks
 - **Student Focus**: More time for teaching and student interaction
 - **Professional Tools**: Modern, intuitive interface
 
 ### **For Students**
+
 - **Easy Access**: Simple, user-friendly interface
 - **Mobile Friendly**: Access from any device
 - **Real-time Updates**: Stay informed about classes and assignments
 - **Self-Service**: Manage personal information and preferences
 
 ### **For Parents**
+
 - **Stay Informed**: Real-time updates on student progress
 - **Easy Communication**: Direct communication with teachers
 - **Transparent Process**: Clear view of academic progress
@@ -347,4 +389,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ for the education community**
 
-*Empowering schools with modern technology for better education management.*
+_Empowering schools with modern technology for better education management._
