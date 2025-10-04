@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { UserPlus, Loader2, Users } from "lucide-react";
+import { UserPlus, Loader2 } from "lucide-react";
 import { classesService } from "@/lib/classes";
 import { studentsService } from "@/lib/students";
 import { toast } from "sonner";
@@ -99,7 +99,8 @@ const EnrollmentDialog: React.FC<EnrollmentDialogProps> = ({
     } catch (error: unknown) {
       console.error("Error enrolling student:", error);
       const errorMessage =
-        (error as any)?.response?.data?.message ||
+        (error as { response?: { data?: { message?: string } } })?.response
+          ?.data?.message ||
         (error as Error)?.message ||
         "Failed to enroll student";
 

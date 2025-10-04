@@ -27,13 +27,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Plus, Search, Filter, Users, RefreshCw } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Student,
-  Class,
-  CreateStudentData,
-  UpdateStudentData,
-  StudentsQuery,
-} from "@/types";
+import { Student, Class, CreateStudentData, UpdateStudentData } from "@/types";
 import { studentsService } from "@/lib/students";
 import { classesService } from "@/lib/classes";
 import { toast } from "sonner";

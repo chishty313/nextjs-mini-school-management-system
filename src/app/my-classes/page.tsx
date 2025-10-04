@@ -42,7 +42,7 @@ interface StudentClass {
 }
 
 const MyClassesPage: React.FC = () => {
-  const { user } = useAuth();
+  const {} = useAuth();
   const [classes, setClasses] = useState<StudentClass[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);

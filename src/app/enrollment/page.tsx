@@ -142,7 +142,8 @@ const EnrollmentPage: React.FC = () => {
     } catch (error: unknown) {
       console.error("Error enrolling student:", error);
       const errorMessage =
-        (error as any)?.response?.data?.message ||
+        (error as { response?: { data?: { message?: string } } })?.response
+          ?.data?.message ||
         (error as Error)?.message ||
         "Failed to enroll student";
 

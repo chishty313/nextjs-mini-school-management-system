@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Bell, Search, Menu, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -122,7 +122,7 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   // Load notifications
-  const loadNotifications = async () => {
+  const loadNotifications = useCallback(async () => {
     // Only load notifications if user is authenticated
     if (!user) {
       setNotifications([]);
@@ -157,7 +157,7 @@ const Header: React.FC<HeaderProps> = ({
               unread: true,
             })
           );
-        } catch (error) {
+        } catch {
           // If no classes, show a welcome notification
           sampleNotifications = [
             {
@@ -210,7 +210,7 @@ const Header: React.FC<HeaderProps> = ({
       setNotifications([]);
       setNotificationCount(0);
     }
-  };
+  }, [user]);
 
   // Auto-refresh notifications every 30 seconds
   useEffect(() => {
@@ -220,7 +220,7 @@ const Header: React.FC<HeaderProps> = ({
       const interval = setInterval(loadNotifications, 30000);
       return () => clearInterval(interval);
     }
-  }, [user, loadNotifications]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [user, loadNotifications]);
 
   // Handle search input change
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
