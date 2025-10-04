@@ -6,6 +6,8 @@ export interface TeacherDetails {
   email: string;
   role: string;
   createdAt: string;
+  sectionCount: number;
+  maxSections: number;
   classes: Array<{
     id: number;
     name: string;
@@ -25,6 +27,7 @@ export interface UserDetails {
   email: string;
   role: string;
   createdAt: string;
+  sectionCount?: number;
 }
 
 export interface AdminStats {

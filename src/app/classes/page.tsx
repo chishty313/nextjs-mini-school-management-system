@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 import DashboardLayout from "@/components/layout/DashboardLayout";
@@ -66,23 +66,7 @@ const ClassesPage: React.FC = () => {
   const [cacheTimestamp, setCacheTimestamp] = useState<number>(0);
   const CACHE_DURATION = 30000; // 30 seconds
 
-  // Load initial data
-  useEffect(() => {
-    loadClasses();
-    loadUniqueStudentCount();
-  }, []);
-
-  // Auto-refresh data every 30 seconds for real-time updates
-  useEffect(() => {
-    const interval = setInterval(() => {
-      loadClasses();
-      loadUniqueStudentCount();
-    }, 30000); // Refresh every 30 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const loadClasses = async () => {
+  const loadClasses = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -108,7 +92,23 @@ const ClassesPage: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [cacheTimestamp, classesCache]);
+
+  // Load initial data
+  useEffect(() => {
+    loadClasses();
+    loadUniqueStudentCount();
+  }, [loadClasses]);
+
+  // Auto-refresh data every 30 seconds for real-time updates
+  useEffect(() => {
+    const interval = setInterval(() => {
+      loadClasses();
+      loadUniqueStudentCount();
+    }, 30000); // Refresh every 30 seconds
+
+    return () => clearInterval(interval);
+  }, [loadClasses]);
 
   const loadClassStudents = async (classId: number) => {
     try {

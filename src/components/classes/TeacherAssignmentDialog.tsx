@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Class, User } from "@/types";
+import { Class } from "@/types";
+import { UserDetails } from "@/lib/admin";
 import {
   Dialog,
   DialogContent,
@@ -36,7 +37,7 @@ const TeacherAssignmentDialog: React.FC<TeacherAssignmentDialogProps> = ({
   classItem,
   onSuccess,
 }) => {
-  const [availableTeachers, setAvailableTeachers] = useState<User[]>([]);
+  const [availableTeachers, setAvailableTeachers] = useState<UserDetails[]>([]);
   const [selectedTeacherId, setSelectedTeacherId] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [teachersLoading, setTeachersLoading] = useState(false);

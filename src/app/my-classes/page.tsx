@@ -31,7 +31,7 @@ interface StudentClass {
   id: number;
   name: string;
   section: string;
-  teacher: {
+  teacher?: {
     id: number;
     name: string;
     email: string;

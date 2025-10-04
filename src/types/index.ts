@@ -81,7 +81,7 @@ export interface Class {
     id: number;
     name: string;
     email: string;
-  };
+  } | null;
 }
 
 export interface CreateClassData {
